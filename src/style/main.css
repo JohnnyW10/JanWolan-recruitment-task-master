@@ -64,15 +64,86 @@ body section .content button:hover {
   animation: buttonHover .2s linear both;
 }
 
-body section .popupWindow {
+body section .Overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.5;
   display: none;
-  position: absolute;
+}
+
+body section .popupWindow {
+  position: fixed;
   width: 920px;
   height: 210px;
-  left: 260px;
-  top: 375px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background: #FFFFFF;
-  border: 1px solid black;
+  display: none;
+  margin: 0px auto;
+}
+
+body section .popupWindow .popupTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body section .popupWindow .popupTop h1 {
+  position: absolute;
+  width: 380px;
+  height: 50px;
+  left: 96px;
+  top: 56px;
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%;
+  color: #121212;
+}
+
+body section .popupWindow .popupTop button {
+  position: absolute;
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.5em;
+  width: 24px;
+  height: 24px;
+  right: 40px;
+  top: 40px;
+}
+
+body section .popupWindow p {
+  position: absolute;
+  width: 380px;
+  height: 24px;
+  left: calc(50% - 380px/2 - 175px);
+  top: calc(50% - 24px/2 + 37px);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: #121212;
+}
+
+body section .popupWindow #reset {
+  position: fixed;
+  bottom: 30px;
+  right: 50%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #d4ab95;
+  cursor: pointer;
 }
 
 @keyframes buttonHover {
@@ -88,6 +159,22 @@ body section .popupWindow {
   body section {
     width: 1220px;
     height: 900px;
+  }
+  body section .popupWindow {
+    width: 720px;
+    height: 210px;
+  }
+  body section .popupWindow p {
+    top: 120px;
+    left: 20px;
+  }
+  body section .popupWindow #reset {
+    bottom: 40px;
+    right: 40%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #d4ab95;
+    cursor: pointer;
   }
   body section img {
     width: 440px;
@@ -107,6 +194,21 @@ body section .popupWindow {
   body section {
     width: 960px;
     height: 900px;
+  }
+  body section .popupWindow {
+    width: 100%;
+  }
+  body section .popupWindow p {
+    top: 120px;
+    left: 20px;
+  }
+  body section .popupWindow #reset {
+    bottom: 40px;
+    right: 40%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #d4ab95;
+    cursor: pointer;
   }
   body section img {
     width: 400px;
@@ -178,6 +280,18 @@ body section .popupWindow {
     width: 480px;
     height: 700px;
   }
+  body section .popupWindow p {
+    top: 120px;
+    left: 20px;
+  }
+  body section .popupWindow #reset {
+    bottom: 40px;
+    right: 20%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #d4ab95;
+    cursor: pointer;
+  }
   body section img {
     width: 480px;
     height: 300px;
@@ -211,6 +325,33 @@ body section .popupWindow {
 @media (max-width: 260px) {
   body section {
     width: 260px;
+  }
+  body section .popupWindow {
+    width: 260px;
+    height: 300px;
+    text-align: center;
+    padding: 0;
+  }
+  body section .popupWindow h1 {
+    padding: 0;
+    margin: 0;
+    width: 260px;
+    height: 50px;
+    left: 10px;
+    top: 56px;
+  }
+  body section .popupWindow p {
+    top: 120px;
+    padding: 0;
+    left: 0;
+  }
+  body section .popupWindow #reset {
+    bottom: 40px;
+    right: 40%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #d4ab95;
+    cursor: pointer;
   }
   body section img {
     width: 260px;

@@ -31,12 +31,13 @@
                 <p>Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.</p>
                 <button id="btnPopUp">Button</button>
             </div>
-            <div class="popupBackground">
-                <div class="popupWindow" id="popupWindow">
-                    <h1>Alert!</h1>
-                    <p id="popup_message"></p>
-                </div>
-            </div>>
+            <div class="Overlay" id="Overlay"></div>
+            <div class="popupWindow" id="popupWindow">
+                <div class="popupTop"><h1>Alert!</h1><button id="closeBtn">&times;</button></div>
+                <p id="popup_message"></p>
+                <span id="el"></span>
+            </div>
+        
         </section>
     </main>
     <script src="src/js/main.js"></script>
